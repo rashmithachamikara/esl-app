@@ -1,3 +1,20 @@
+# Digital Shelf Link 
+
+Digital Shelf link is an Electronic Shelf Label system.
+
+This repositry contains the NextJS Application for Digital Shelf Link Electronic Shelf Label System. esl-app is the frontend repositry of the system.
+
+## Branches
+
+Please checkout a new feature branch from the dev branch for development. Add a pull request to merge your feature branch to the dev branch.
+
+1. main
+2. UAT
+3. test
+4. dev
+
+# Next Js
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
