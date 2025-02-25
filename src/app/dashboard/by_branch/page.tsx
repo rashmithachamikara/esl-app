@@ -1,7 +1,7 @@
 "use client";
 
 import { TrendingUp } from "lucide-react";
-import { Bar, BarChart, CartesianGrid, XAxis } from "recharts";
+import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 
 import "./by_branch.css";
 import {
@@ -56,7 +56,14 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="esl" fill="var(--color-esl)" radius={8} />
+            <Bar dataKey="esl" fill="var(--color-esl)" radius={8}>
+              <LabelList
+                position="top"
+                offset={12}
+                className="fill-foreground"
+                fontSize={12}
+              />
+            </Bar>
           </BarChart>
         </ChartContainer>
       </CardContent>
