@@ -19,17 +19,17 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { branch: "DEl", desktop: 186 },
-  { branch: "UKK", desktop: 305 },
-  { branch: "AMR", desktop: 237 },
-  { branch: "ZOO", desktop: 73 },
-  { branch: "ALL", desktop: 209 },
-  { branch: "DZD", desktop: 214 },
+  { branch: "DEl", esl: 186 },
+  { branch: "UKK", esl: 305 },
+  { branch: "AMR", esl: 237 },
+  { branch: "ZOO", esl: 73 },
+  { branch: "ALL", esl: 209 },
+  { branch: "DZD", esl: 214 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  esl: {
+    label: "esl",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig;
@@ -56,7 +56,7 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={8} />
+            <Bar dataKey="esl" fill="var(--color-esl)" radius={8} />
           </BarChart>
         </ChartContainer>
       </CardContent>

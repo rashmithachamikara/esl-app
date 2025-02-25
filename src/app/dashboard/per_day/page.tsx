@@ -18,24 +18,24 @@ import {
   ChartTooltipContent,
 } from "@/components/ui/chart";
 const chartData = [
-  { branch: "DEl", desktop: 186 },
-  { branch: "UKK", desktop: 305 },
-  { branch: "AMR", desktop: 237 },
-  { branch: "ZOO", desktop: 73 },
-  { branch: "ALL", desktop: 209 },
-  { branch: "DZD", desktop: 214 },
-  { branch: "DEl", desktop: 186 },
-  { branch: "UKK", desktop: 305 },
-  { branch: "AMR", desktop: 237 },
-  { branch: "ZOO", desktop: 73 },
-  { branch: "ALL", desktop: 209 },
-  { branch: "DZD", desktop: 214 },
-  { branch: "DZD", desktop: 214 },
+  { branch: "DEl", flashes: 186 },
+  { branch: "UKK", flashes: 305 },
+  { branch: "AMR", flashes: 237 },
+  { branch: "ZOO", flashes: 73 },
+  { branch: "ALL", flashes: 209 },
+  { branch: "DZD", flashes: 214 },
+  { branch: "DEl", flashes: 186 },
+  { branch: "UKK", flashes: 305 },
+  { branch: "AMR", flashes: 237 },
+  { branch: "ZOO", flashes: 73 },
+  { branch: "ALL", flashes: 209 },
+  { branch: "DZD", flashes: 214 },
+  { branch: "DZD", flashes: 350 },
 ];
 
 const chartConfig = {
-  desktop: {
-    label: "Desktop",
+  flashes: {
+    label: "Flashes",
     color: "hsl(var(--chart-1))",
   },
 } satisfies ChartConfig;
@@ -56,7 +56,7 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="desktop" fill="var(--color-desktop)" radius={0} />
+            <Bar dataKey="flashes" fill="var(--color-flashes)" radius={0} />
           </BarChart>
         </ChartContainer>
       </CardContent>
