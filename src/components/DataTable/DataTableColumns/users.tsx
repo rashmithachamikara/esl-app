@@ -3,20 +3,21 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MoreVertical, } from "lucide-react";
+import { MoreVertical } from "lucide-react";
 
-// Define User type
 export interface User {
   id: number;
   name: string;
   email: string;
+  branch: string;
+  role: string;
 }
 
 // Table columns definition
 export const userColumns: ColumnDef<User>[] = [
   {
     accessorKey: "id",
-    header: "ID",
+    header: "User ID",
     enableHiding: false,
   },
   {
@@ -26,6 +27,14 @@ export const userColumns: ColumnDef<User>[] = [
   {
     accessorKey: "email",
     header: "Email",
+  },
+  {
+    accessorKey: "branch",
+    header: "Branch",
+  },
+  {
+    accessorKey: "role",
+    header: "Role",
   },
   {
     id: "actions",
