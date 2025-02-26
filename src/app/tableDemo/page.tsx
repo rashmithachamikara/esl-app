@@ -3,10 +3,10 @@ import { userColumns } from "@/components/DataTable/DataTableColumns/users";
 import { branchColumns } from "@/components/DataTable/DataTableColumns/branch";
 import { users, branches, devices, User, Branch, Device } from "./sample-data";
 import { deviceColumns } from "@/components/DataTable/DataTableColumns/esl";
-  
+
 const UsersPage = () => {
   return (
-    <div style={{display:"grid", gap:"50px"}}>
+    <div style={{ display: "grid", gap: "50px" }}>
       <div>
         <h2>User List</h2>
         <DataTable<User> columns={userColumns} data={users} />
