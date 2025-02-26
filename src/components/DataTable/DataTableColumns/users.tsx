@@ -3,7 +3,7 @@
 import { ColumnDef } from "@tanstack/react-table";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { Button } from "@/components/ui/button";
-import { MoreHorizontal } from "lucide-react";
+import { MoreVertical, } from "lucide-react";
 
 // Define User type
 export interface User {
@@ -37,7 +37,7 @@ export const userColumns: ColumnDef<User>[] = [
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="w-8 h-8 p-0">
-              <MoreHorizontal className="w-4 h-4" />
+              <MoreVertical className="w-4 h-4" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">

@@ -27,7 +27,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Button } from "../ui/button";
-import { ArrowUpDown } from "lucide-react";
+import { ArrowUpDown, ChevronDown } from "lucide-react";
 import { TablePagination } from "@/components/DataTable/TablePagination"; // Import pagination component
 
 interface DataTableProps<T> {
@@ -60,18 +60,20 @@ export function DataTable<T>({ columns, data }: DataTableProps<T>) {
 
   return (
     <div className="w-full p-4 border rounded-lg shadow">
-      {/* Search Box */}
+      {/* Table Tools */}
       <div className="flex items-center gap-2 mb-4">
+        {/* Search Box */}
         <Input
-          placeholder="Search..."
+          placeholder="Filter Rows"
           value={globalFilter}
           onChange={(e) => setGlobalFilter(e.target.value)}
           className="max-w-sm"
         />
+        {/* Visibility Dropdown */}
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
             <Button variant="outline" className="ml-auto">
-              Columns
+              Columns <ChevronDown />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
