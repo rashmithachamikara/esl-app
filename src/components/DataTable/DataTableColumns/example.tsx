@@ -10,19 +10,18 @@ import {
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
 
+// Define User type
 export interface User {
   id: number;
   name: string;
   email: string;
-  branch: string;
-  role: string;
 }
 
 // Table columns definition
 export const userColumns: ColumnDef<User>[] = [
   {
     accessorKey: "id",
-    header: "User ID",
+    header: "ID",
     enableHiding: false,
   },
   {
@@ -32,14 +31,6 @@ export const userColumns: ColumnDef<User>[] = [
   {
     accessorKey: "email",
     header: "Email",
-  },
-  {
-    accessorKey: "branch",
-    header: "Branch",
-  },
-  {
-    accessorKey: "role",
-    header: "Role",
   },
   {
     id: "actions",

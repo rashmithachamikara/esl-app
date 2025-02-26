@@ -10,43 +10,44 @@ import {
 import { Button } from "@/components/ui/button";
 import { MoreVertical } from "lucide-react";
 
-export interface User {
+// Define Branch type
+export interface Branch {
   id: number;
-  name: string;
+  branchName: string;
+  location: string;
+  address: string;
+  contactNumber: string;
   email: string;
-  branch: string;
-  role: string;
 }
 
 // Table columns definition
-export const userColumns: ColumnDef<User>[] = [
+export const branchColumns: ColumnDef<Branch>[] = [
   {
-    accessorKey: "id",
-    header: "User ID",
-    enableHiding: false,
+    accessorKey: "branchName",
+    header: "Branch Name",
   },
   {
-    accessorKey: "name",
-    header: "Name",
+    accessorKey: "location",
+    header: "Location",
+  },
+  {
+    accessorKey: "address",
+    header: "Address",
+  },
+  {
+    accessorKey: "contactNumber",
+    header: "Contact",
   },
   {
     accessorKey: "email",
     header: "Email",
   },
   {
-    accessorKey: "branch",
-    header: "Branch",
-  },
-  {
-    accessorKey: "role",
-    header: "Role",
-  },
-  {
     id: "actions",
-    header: "",
+    header: "Actions",
     enableHiding: false,
     cell: ({ row }) => {
-      const user = row.original;
+      const branch = row.original;
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -55,12 +56,8 @@ export const userColumns: ColumnDef<User>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => alert(`Editing ${user.name}`)}>
-              Edit
-            </DropdownMenuItem>
-            <DropdownMenuItem onClick={() => alert(`Deleting ${user.name}`)}>
-              Delete
-            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert(`Editing ${branch.branchName}`)}>Edit</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert(`Deleting ${branch.branchName}`)}>Delete</DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
