@@ -1,7 +1,7 @@
 "use client";
-import SearchBar from "../components/SearchBar/SearchBar";
-import AddButton from "../components/AddButton/AddButton";
-import FilterTab from "../components/FilterTab/FilterTab";
+import SearchBar from "@/components/SearchBar/SearchBar";
+import AddButton from "@/components/AddButton/AddButton";
+import FilterTab from "@/components/FilterTab/FilterTab";
 
 export default function Home() {
   const handleSearch = (query: string) => {
