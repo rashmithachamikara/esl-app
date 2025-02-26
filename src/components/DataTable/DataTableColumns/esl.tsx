@@ -1,19 +1,24 @@
 "use client"
 
 import { ColumnDef } from "@tanstack/react-table";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
-import { MoreVertical } from "lucide-react";
+import { Copy, MoreVertical } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 
-// Define Device type
+// Device Type Interface
 interface Device {
   serial: string;
   mac: string;
   branch: string;
   accessPointMac: string;
-  battery: number; // Percentage (0-100)
+  battery: number; // Battery percentage (0-100)
 }
 
+// Function to copy text to clipboard
+const copyToClipboard = (text: string) => {
+  navigator.clipboard.writeText(text);
+};
 
 // Table columns definition
 export const deviceColumns: ColumnDef<Device>[] = [
@@ -25,6 +30,14 @@ export const deviceColumns: ColumnDef<Device>[] = [
   {
     accessorKey: "mac",
     header: "MAC Address",
+    cell: ({ row }) => (
+      <div className="flex items-center gap-2">
+        <span>{row.original.mac}</span>
+        <Button variant="ghost" size="icon" onClick={() => copyToClipboard(row.original.mac)}>
+          <Copy className="w-4 h-4" />
+        </Button>
+      </div>
+    ),
   },
   {
     accessorKey: "branch",
@@ -37,7 +50,12 @@ export const deviceColumns: ColumnDef<Device>[] = [
   {
     accessorKey: "battery",
     header: "Battery (%)",
-    cell: ({ row }) => `${row.original.battery}%`,
+    cell: ({ row }) => (
+      <div className="flex items-center gap-2">
+        <Progress value={row.original.battery} className="w-24 h-2" />
+        <span>{row.original.battery}%</span>
+      </div>
+    ),
   },
   {
     id: "actions",
