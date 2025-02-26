@@ -1,19 +1,14 @@
 "use client";
-import SearchBar from "../components/SearchBar/SearchBar";
 import AddButton from "../components/AddButton/AddButton";
 
-export default function Home() {
-  const handleSearch = (query: string) => {
-    console.log("Searching for:", query);
-  };
-
+export default function AddPage() {
   const handleAddClick = () => {
     console.log("Add button clicked");
   };
 
   return (
     <div className="p-4">
-      <SearchBar placeholder="Search by Employee ID" onSearch={handleSearch} />
+      <h1>Add Page</h1>
       <AddButton label="Add" onClick={handleAddClick} className="mt-4" />
     </div>
   );
