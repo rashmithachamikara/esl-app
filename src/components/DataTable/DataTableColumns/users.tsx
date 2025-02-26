@@ -17,6 +17,7 @@ export const userColumns: ColumnDef<User>[] = [
   {
     accessorKey: "id",
     header: "ID",
+    enableHiding: false,
   },
   {
     accessorKey: "name",
@@ -28,7 +29,8 @@ export const userColumns: ColumnDef<User>[] = [
   },
   {
     id: "actions",
-    header: "Actions",
+    header: "",
+    enableHiding: false,
     cell: ({ row }) => {
       const user = row.original;
       return (
