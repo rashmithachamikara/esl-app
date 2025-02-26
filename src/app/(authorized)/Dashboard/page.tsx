@@ -1,6 +1,3 @@
 export default function AuthorizedPage() {
-  return (
-      <p>dashboard</p>
-  )
+  return <p>dashboard</p>;
 }
-
