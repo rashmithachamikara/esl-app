@@ -56,8 +56,16 @@ export const branchColumns: ColumnDef<Branch>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => alert(`Editing ${branch.branchName}`)}>Edit</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => alert(`Deleting ${branch.branchName}`)}>Delete</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => alert(`Editing ${branch.branchName}`)}
+            >
+              Edit
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => alert(`Deleting ${branch.branchName}`)}
+            >
+              Delete
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );

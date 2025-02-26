@@ -29,7 +29,17 @@ const getPageNumbers = (current: number, total: number) => {
   if (current <= 4) {
     pages.push(1, 2, 3, 4, 5, 6, "...", total - 1, total);
   } else if (current >= total - 3) {
-    pages.push(1, 2, "...", total-5, total - 4, total - 3, total - 2, total - 1, total);
+    pages.push(
+      1,
+      2,
+      "...",
+      total - 5,
+      total - 4,
+      total - 3,
+      total - 2,
+      total - 1,
+      total
+    );
   } else {
     pages.push(
       1,

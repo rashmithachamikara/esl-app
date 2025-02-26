@@ -1,10 +1,16 @@
-"use client"
+"use client";
 
 import { ColumnDef } from "@tanstack/react-table";
 import { Progress } from "@/components/ui/progress";
 import { Button } from "@/components/ui/button";
 import { Copy, MoreVertical } from "lucide-react";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 
 // Device Type Interface
 interface Device {
@@ -33,7 +39,11 @@ export const deviceColumns: ColumnDef<Device>[] = [
     cell: ({ row }) => (
       <div className="flex items-center gap-2">
         <span>{row.original.mac}</span>
-        <Button variant="ghost" size="icon" onClick={() => copyToClipboard(row.original.mac)}>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => copyToClipboard(row.original.mac)}
+        >
           <Copy className="w-4 h-4" />
         </Button>
       </div>
@@ -71,12 +81,28 @@ export const deviceColumns: ColumnDef<Device>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem onClick={() => alert(`Viewing details of ${device.serial}`)}>Details</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => alert(`Pinging ${device.mac}`)}>Ping</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => alert(`Refreshing info for ${device.serial}`)}>Refresh Information</DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => alert(`Viewing details of ${device.serial}`)}
+            >
+              Details
+            </DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert(`Pinging ${device.mac}`)}>
+              Ping
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => alert(`Refreshing info for ${device.serial}`)}
+            >
+              Refresh Information
+            </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem onClick={() => alert(`Editing ${device.serial}`)}>Edit</DropdownMenuItem>
-            <DropdownMenuItem onClick={() => alert(`Deleting ${device.serial}`)}>Delete</DropdownMenuItem>
+            <DropdownMenuItem onClick={() => alert(`Editing ${device.serial}`)}>
+              Edit
+            </DropdownMenuItem>
+            <DropdownMenuItem
+              onClick={() => alert(`Deleting ${device.serial}`)}
+            >
+              Delete
+            </DropdownMenuItem>
           </DropdownMenuContent>
         </DropdownMenu>
       );
