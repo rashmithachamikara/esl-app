@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import SearchBar from "../components/SearchBar/SearchBar";
+import SearchBar from "@/components/SearchBar/SearchBar";
 
 export default function Home() {
   const handleSearch = (query: string) => {
