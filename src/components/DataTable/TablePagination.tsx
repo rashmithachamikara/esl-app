@@ -72,6 +72,7 @@ export function TablePagination({ table }: { table: TableInstance }) {
               variant="outline"
               onClick={() => table.previousPage()}
               disabled={!table.getCanPreviousPage()}
+              className="cursor-pointer select-none"
             >
               Previous
             </Button>
@@ -105,6 +106,7 @@ export function TablePagination({ table }: { table: TableInstance }) {
               variant="outline"
               onClick={() => table.nextPage()}
               disabled={!table.getCanNextPage()}
+              className="cursor-pointer select-none"
             >
               Next
             </Button>

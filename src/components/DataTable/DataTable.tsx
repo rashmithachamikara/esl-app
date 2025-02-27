@@ -99,7 +99,7 @@ export function DataTable<T>({ columns, data }: DataTableProps<T>) {
       </div>
 
       {/* Table */}
-      <div style={{ minHeight: "570px" }}>
+      <div style={{ minHeight: "650px" }}>
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
