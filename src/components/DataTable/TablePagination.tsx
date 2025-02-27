@@ -92,6 +92,7 @@ export function TablePagination({ table }: { table: TableInstance }) {
                 <PaginationLink
                   isActive={currentPage === page}
                   onClick={() => table.setPageIndex(page - 1)}
+                  className="cursor-pointer select-none"
                 >
                   {page}
                 </PaginationLink>
