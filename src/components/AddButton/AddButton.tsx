@@ -1,4 +1,5 @@
 import { SquarePlus } from "lucide-react";
+import { Button } from "@/components/ui/button"
 import React from "react";
 
 interface AddButtonProps {
@@ -9,19 +10,16 @@ interface AddButtonProps {
 
 export default function AddButton({ label, onClick, className }: AddButtonProps) {
   return (
-    <button
+    <Button
       onClick={onClick}
-      className={`flex items-center justify-center bg-[#D93639] text-white text-sm font-medium rounded-md px-4 py-2 gap-2 w-[143px] h-[40px] ${className}`}
+      className={`${className}`}
       style={{
-        fontFamily: 'Inter',
-        fontWeight: 500,
-        fontSize: '14px',
-        lineHeight: '24px',
-        letterSpacing: '0%',
+        backgroundColor:"#D93639",
+        alignItems:"center"
       }}
     >
       <SquarePlus />
       {label}
-    </button>
+    </Button>
   );
 }
