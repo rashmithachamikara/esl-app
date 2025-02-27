@@ -59,7 +59,7 @@ export function DataTable<T>({ columns, data }: DataTableProps<T>) {
   });
 
   return (
-    <div className="w-full p-4 border rounded-lg shadow">
+    <div className="w-full p-4 border rounded-lg">
       {/* Table Tools */}
       <div className="flex items-center gap-2 mb-4">
         {/* Search Box */}
