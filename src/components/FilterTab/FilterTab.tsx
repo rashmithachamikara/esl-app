@@ -14,7 +14,7 @@ export default function FilterTab() {
       className="flex flex-col space-y-2"
       style={{
         width: '551px',
-        height: '66px',
+        // height: '66px',
         top: '135px',
         left: '408px',
         borderRadius: '6px',
