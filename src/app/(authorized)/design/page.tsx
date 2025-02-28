@@ -8,7 +8,7 @@ export default function Page() {
       <div className="flex justify-between items-center content-start mr-6">
         <h1>Designs</h1>
       </div>
-      <div className="grid grid-cols-1 gap-y-5 md:grid-cols-3 mt-5 mr-6 text-sm">
+      <div className="grid grid-cols-1 gap-y-5 gap-x-16 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-5 text-sm">
         <DesignCard
           title="Design-001"
           imageUrl="/image-library/design_label.png"
