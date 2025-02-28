@@ -7,6 +7,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Pencil, Trash2 } from "lucide-react";
+import Image from 'next/image';
 
 export default function DesignCard({
   title,
@@ -21,8 +22,8 @@ export default function DesignCard({
         <CardTitle className="text-sm">{title}</CardTitle> {/* Reduce font size */}
       </CardHeader>
       <CardContent>
-        <div className="p-3 mb-0"> {/* Adjustable gap */}
-          <img src={imageUrl} className="resized-image" alt={title} /> {/* Adjust image size */}
+        <div>
+          <Image src={imageUrl} className="resized-image" alt={title} layout="responsive" width={500} height={300} /> {/* Adjust image size */}
         </div>
       </CardContent>
       <CardFooter className="flex justify-between mt-0 mb-0"> {/* Add padding to ensure buttons are inside */}
