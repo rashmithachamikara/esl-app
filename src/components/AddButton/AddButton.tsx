@@ -1,5 +1,5 @@
 import { SquarePlus } from "lucide-react";
-import { Button } from "@/components/ui/button"
+import { Button } from "@/components/ui/button";
 import React from "react";
 
 interface AddButtonProps {
@@ -8,14 +8,18 @@ interface AddButtonProps {
   className?: string; // Optional className for additional styling
 }
 
-export default function AddButton({ label, onClick, className }: AddButtonProps) {
+export default function AddButton({
+  label,
+  onClick,
+  className,
+}: AddButtonProps) {
   return (
     <Button
       onClick={onClick}
       className={`${className}`}
       style={{
-        backgroundColor:"#D93639",
-        alignItems:"center"
+        backgroundColor: "#D93639",
+        alignItems: "center",
       }}
     >
       <SquarePlus />

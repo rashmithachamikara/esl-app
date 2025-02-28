@@ -7,22 +7,29 @@ import { ChevronDownIcon } from "lucide-react";
 export default function FilterTab() {
   const [selectedFilter, setSelectedFilter] = useState("All");
 
-  const filters = ["All", "Filter 1", "Filter 2", "Filter 3", "Filter 4", "Filter 5"];
+  const filters = [
+    "All",
+    "Filter 1",
+    "Filter 2",
+    "Filter 3",
+    "Filter 4",
+    "Filter 5",
+  ];
 
   return (
     <div
       className="flex flex-col space-y-2"
       style={{
-        width: '551px',
+        width: "551px",
         // height: '66px',
-        top: '135px',
-        left: '408px',
-        borderRadius: '6px',
-        fontFamily: 'Inter',
+        top: "135px",
+        left: "408px",
+        borderRadius: "6px",
+        fontFamily: "Inter",
         fontWeight: 400,
-        fontSize: '14px',
-        lineHeight: '24px',
-        letterSpacing: '0%',
+        fontSize: "14px",
+        lineHeight: "24px",
+        letterSpacing: "0%",
       }}
     >
       <label className="text-sm font-medium text-gray-700">Filter</label>
