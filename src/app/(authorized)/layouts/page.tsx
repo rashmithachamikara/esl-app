@@ -11,14 +11,14 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex justify-between items-center content-start mr-6">
-        <h1 className="text-2xl font-bold">Layouts</h1>
+      <div className="flex justify-between items-center content-start">
+        <h1>Layouts</h1>
       </div>
-      <div className="flex justify-between items-center mr-6 ">
-        <FilterTab />
+      <div style={{display:"flex"}} className="flex flex-row-reverse gap-4 justify-between items-end mt-6">
         <AddButton label="Add Layout" onClick={handleAddClick} />
+        <FilterTab />
       </div>
-      <div className="grid grid-cols-1 gap-y-5 md:grid-cols-4 mt-5 mr-6 text-sm"> {/* Adjust gap to 64px */}
+      <div className="grid grid-cols-1 gap-y-5 gap-x-16 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-5 text-sm"> {/* Adjust gap to 64px */}
         <DesignCard title="Floor 1" imageUrl="/image-library/Picture1.png" />
         <DesignCard title="Floor 2" imageUrl="/image-library/Picture1.png" />
         <DesignCard title="Floor 3" imageUrl="/image-library/Picture1.png" />
