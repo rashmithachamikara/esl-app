@@ -17,7 +17,7 @@ export default function DesignCard({
   imageUrl: string;
 }) {
   return (
-    <Card className="mr-16 h-65">
+    <Card className="h-65">
       {" "}
       {/* Custom card size */}
       <CardHeader className="mb-0 pb-1">
@@ -37,13 +37,11 @@ export default function DesignCard({
           {/* Adjust image size */}
         </div>
       </CardContent>
-      <CardFooter className="flex justify-between mt-0 mb-0">
-        {" "}
-        {/* Add padding to ensure buttons are inside */}
-        <Button>
+      <CardFooter className="flex flex-col xl:flex-row justify-between mt-0 mb-0 space-y-2 xl:space-y-0 xl:space-x-2">
+        <Button className="w-full">
           <Pencil /> Edit
         </Button>
-        <Button className="bg-red-900 text-white">
+        <Button className="w-full bg-red-900 text-white">
           <Trash2 />
           Delete
         </Button>
