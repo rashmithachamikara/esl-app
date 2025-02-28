@@ -11,10 +11,10 @@ export default function Page() {
 
   return (
     <>
-      <div className="flex justify-between items-center content-start ml-16 mr-6">
+      <div className="flex justify-between items-center content-start mr-6">
         <h1 className="text-2xl font-bold">Layouts</h1>
       </div>
-      <div className="flex justify-between items-center ml-16 mr-6 ">
+      <div className="flex justify-between items-center mr-6 ">
         <FilterTab />
         <AddButton label="Add Layout" onClick={handleAddClick} />
       </div>
