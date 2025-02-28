@@ -16,7 +16,7 @@ export default function DesignCard({
   imageUrl: string;
 }) {
   return (
-    <Card className="ml-16 h-65"> {/* Custom card size */}
+    <Card className="mr-16 h-65"> {/* Custom card size */}
       <CardHeader className="mb-0 pb-1">
         <CardTitle className="text-sm">{title}</CardTitle> {/* Reduce font size */}
       </CardHeader>
