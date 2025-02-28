@@ -9,7 +9,9 @@ export default function RootPage() {
         alignItems: "center",
       }}
     >
-      <h1 className="text-6xl font-bold" style={{ color: "#D93639" }}>Shelf Link</h1>
+      <h1 className="text-6xl font-bold" style={{ color: "#D93639" }}>
+        Shelf Link
+      </h1>
     </div>
   );
 }
