@@ -1,9 +1,9 @@
-import Card from "@/app/(authorized)/Dashboard/dashboard_components/cards/page";
-import ESLFlashesChart from "@/app/(authorized)/Dashboard/dashboard_components/per_day/page";
-import ESLFlashesByBranch from "@/app/(authorized)/Dashboard/dashboard_components/by_branch/page";
-import AccessChart from "@/app/(authorized)/Dashboard/dashboard_components/access_chart/page";
-import MetricChart from "@/app/(authorized)/Dashboard/dashboard_components/metric/page";
-import LineChart from "@/app/(authorized)/Dashboard/dashboard_components/line_chart/page";
+import Card from "@/app/(authorized)/dashboard/dashboard_components/cards/page";
+import ESLFlashesChart from "@/app/(authorized)/dashboard/dashboard_components/per_day/page";
+import ESLFlashesByBranch from "@/app/(authorized)/dashboard/dashboard_components/by_branch/page";
+import AccessChart from "@/app/(authorized)/dashboard/dashboard_components/access_chart/page";
+import MetricChart from "@/app/(authorized)/dashboard/dashboard_components/metric/page";
+import LineChart from "@/app/(authorized)/dashboard/dashboard_components/line_chart/page";
 
 export default function Dashboard() {
   return (
