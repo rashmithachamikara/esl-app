@@ -16,7 +16,11 @@ interface SearchBarProps {
   columns?: string[];
 }
 
-export default function SearchBar({ placeholder = "Search...", onSearch, columns = [] }: SearchBarProps) {
+export default function SearchBar({
+  placeholder = "Search...",
+  onSearch,
+  columns = [],
+}: SearchBarProps) {
   const [searchQuery, setSearchQuery] = useState("");
   const [selectedColumn, setSelectedColumn] = useState(columns[0] || "Columns");
 
@@ -34,9 +38,9 @@ export default function SearchBar({ placeholder = "Search...", onSearch, columns
         placeholder={placeholder}
         className="px-4 py-2 focus:outline-none rounded-lg border border-gray-300 w-full"
       />
-      
+
       {/* Columns Dropdown */}
-      <ShadDropdownMenu>
+      <DropdownMenu>
         <DropdownMenuTrigger asChild>
           <button className="text-gray-900 border border-gray-300 px-4 py-2 flex items-center gap-2 rounded-lg h-10 w-[119px]">
             {selectedColumn}
@@ -67,8 +71,8 @@ export default function SearchBar({ placeholder = "Search...", onSearch, columns
             Column 3
           </DropdownMenuItem>
         </DropdownMenuContent>
-      </ShadDropdownMenu>
-      
+      </DropdownMenu>
+
       {/* Search Button */}
       <SearchButton onClick={handleSearchClick} />
     </div>
