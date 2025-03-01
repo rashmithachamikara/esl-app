@@ -12,9 +12,6 @@ export default function FilterBarTestPage() {
 
   return (
     <div className="p-10">
-      
-      
-      {/* Render FilterTab Component */}
       <FilterTab
         placeholder="Branch"
         filters={["All", "SL", "Australia", "NewYork"]}

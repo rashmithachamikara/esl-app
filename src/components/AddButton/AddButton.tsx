@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { Button } from "@/components/ui/button"; // Importing shadcn/ui button
+import { Button } from "@/components/ui/button"; 
 
 interface AddButtonProps {
   label: string;
@@ -28,7 +28,6 @@ export default function AddButton({ label, href, onClick, className }: AddButton
   );
 }
 
-// Extracted button content for stable SSR
 function ButtonContent({ label }: { label: string }) {
   return (
     <Button className="bg-[#D93639] hover:bg-red-700 text-white px-4 py-2 flex items-center gap-2 rounded-md w-[141px] h-[40px]">

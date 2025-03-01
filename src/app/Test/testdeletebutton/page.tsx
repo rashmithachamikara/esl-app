@@ -10,8 +10,6 @@ export default function TestDeleteButton() {
 
   return (
     <div className="p-10">
-      
-      {/* Render DeleteButton Component */}
       <DeleteButton label="Delete" onClick={handleDelete} />
     </div>
   );
