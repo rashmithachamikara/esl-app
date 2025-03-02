@@ -34,7 +34,7 @@ export function Modal({
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle>
-            <h4>{dialogTitle}</h4> {/* Add h4 tag to dialog title */}
+            {dialogTitle}
           </DialogTitle>
           <DialogDescription>{dialogDescription}</DialogDescription>
         </DialogHeader>
