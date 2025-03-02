@@ -1,14 +1,14 @@
 "use client";
 
 import { useState } from "react";
-import { Input } from "../ui/input";
-import SearchButton from "../ui/SearchButton";
+import { Input } from "@/components/ui/input";
+import SearchButton from "@/components/ui/SearchButton";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
   DropdownMenuContent,
   DropdownMenuItem,
-} from "../ui/dropdown-menu";
+} from "@radix-ui/react-dropdown-menu";
 
 interface SearchBarProps {
   placeholder?: string;
@@ -29,7 +29,7 @@ export default function SearchBar({
   };
 
   return (
-    <div className="flex items-center space-x-4 bg-white">
+    <div className="flex items-center gap-4 w-full">
       {/* Search Input */}
       <Input
         type="text"
@@ -60,16 +60,22 @@ export default function SearchBar({
             </svg>
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuItem onClick={() => setSelectedColumn("Column 1")}>
-            Column 1
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setSelectedColumn("Column 2")}>
-            Column 2
-          </DropdownMenuItem>
-          <DropdownMenuItem onClick={() => setSelectedColumn("Column 3")}>
-            Column 3
-          </DropdownMenuItem>
+        <DropdownMenuContent className="border border-gray-300 rounded-lg shadow-md bg-white w-[119px]">
+          {columns.length > 0 ? (
+            columns.map((col) => (
+              <DropdownMenuItem
+                key={col}
+                onClick={() => setSelectedColumn(col)}
+                className="px-4 py-2 border-b border-gray-300 w-full text-center hover:bg-gray-100 cursor-pointer"
+              >
+                {col}
+              </DropdownMenuItem>
+            ))
+          ) : (
+            <DropdownMenuItem disabled className="px-4 py-2 text-gray-400">
+              No options available
+            </DropdownMenuItem>
+          )}
         </DropdownMenuContent>
       </DropdownMenu>
 
