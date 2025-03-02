@@ -36,7 +36,7 @@ const chartData = [
 const chartConfig = {
   flashes: {
     label: "Flashes",
-    color: "hsl(var(--chart-1))",
+    color: "#D93639",
   },
 } satisfies ChartConfig;
 
@@ -56,7 +56,7 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="flashes" fill="var(--color-flashes)" radius={0} />
+            <Bar dataKey="flashes" fill="#D93639" radius={0} />
           </BarChart>
         </ChartContainer>
       </CardContent>

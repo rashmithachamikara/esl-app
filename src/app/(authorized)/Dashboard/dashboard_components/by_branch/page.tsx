@@ -3,7 +3,6 @@
 import { TrendingUp } from "lucide-react";
 import { Bar, BarChart, CartesianGrid, LabelList, XAxis } from "recharts";
 
-import "./by_branch.css";
 import {
   Card,
   CardContent,
@@ -30,7 +29,7 @@ const chartData = [
 const chartConfig = {
   esl: {
     label: "esl",
-    color: "hsl(var(--chart-1))",
+    color: "#0D9488",
   },
 } satisfies ChartConfig;
 
@@ -56,7 +55,7 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="esl" fill="var(--color-esl)" radius={8}>
+            <Bar dataKey="esl" fill="#0D9488" radius={8}>
               <LabelList
                 position="top"
                 offset={12}

@@ -3,7 +3,7 @@
 import { TrendingUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
-import "./line_chart.css";
+//import "./line_chart.css";
 import {
   Card,
   CardContent,
@@ -30,7 +30,7 @@ const chartData = [
 const chartConfig = {
   flashes: {
     label: "Flashes",
-    color: "hsl(var(--chart-1))",
+    color: "#D93639",
   },
 } satisfies ChartConfig;
 
@@ -66,10 +66,10 @@ export default function Component() {
             <Line
               dataKey="flashes"
               type="natural"
-              stroke="var(--color-flashes)"
+              stroke="#D93639"
               strokeWidth={2}
               dot={{
-                fill: "var(--color-flashes)",
+                fill: "#D93639",
               }}
               activeDot={{
                 r: 6,

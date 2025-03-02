@@ -3,7 +3,6 @@
 import { TrendingUp } from "lucide-react";
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 
-import "./access_chart.css";
 import {
   Card,
   CardContent,
@@ -30,7 +29,7 @@ const chartData = [
 const chartConfig = {
   total: {
     label: "Total Access",
-    color: "hsl(var(--chart-1))",
+    color: "#D93639",
   },
 } satisfies ChartConfig;
 
@@ -52,11 +51,7 @@ export default function Component() {
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
             <PolarAngleAxis dataKey="month" />
             <PolarGrid />
-            <Radar
-              dataKey="total"
-              fill="var(--color-total)"
-              fillOpacity={0.6}
-            />
+            <Radar dataKey="total" fill="#D93639" fillOpacity={0.6} />
           </RadarChart>
         </ChartContainer>
       </CardContent>
