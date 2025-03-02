@@ -8,6 +8,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Pencil, Trash2 } from "lucide-react";
 import Image from "next/image";
+import EditButton from "@/components/EditButton/EditButton";
+import DeleteButton from "@/components/DeleteButton/DeleteButton";
 
 export default function DesignCard({
   title,
@@ -38,13 +40,8 @@ export default function DesignCard({
         </div>
       </CardContent>
       <CardFooter className="flex flex-col xl:flex-row justify-between mt-0 mb-0 space-y-2 xl:space-y-0 xl:space-x-2">
-        <Button className="w-full">
-          <Pencil /> Edit
-        </Button>
-        <Button className="w-full bg-red-900 text-white">
-          <Trash2 />
-          Delete
-        </Button>
+        <EditButton onClick={() => {}} />
+        <DeleteButton onClick={() => {}} />
       </CardFooter>
     </Card>
   );
