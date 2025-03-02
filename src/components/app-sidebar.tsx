@@ -1,6 +1,6 @@
-"use client"
+"use client";
 
-import * as React from "react"
+import * as React from "react";
 import {
   BookOpen,
   Bot,
@@ -11,11 +11,21 @@ import {
   Send,
   Settings2,
   SquareTerminal,
-} from "lucide-react"
-import { Inbox, RectangleHorizontal, Settings, Brush, Users, LayoutDashboard, PanelsTopLeft, Package,  ChevronDown } from "lucide-react"
+} from "lucide-react";
+import {
+  Inbox,
+  RectangleHorizontal,
+  Settings,
+  Brush,
+  Users,
+  LayoutDashboard,
+  PanelsTopLeft,
+  Package,
+  ChevronDown,
+} from "lucide-react";
 
-import { NavMain } from "@/components/nav-main"
-import { NavSecondary } from "@/components/nav-secondary"
+import { NavMain } from "@/components/nav-main";
+import { NavSecondary } from "@/components/nav-secondary";
 import {
   Sidebar,
   SidebarContent,
@@ -24,7 +34,7 @@ import {
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-} from "@/components/ui/sidebar"
+} from "@/components/ui/sidebar";
 
 const data = {
   navMain: [
@@ -102,58 +112,58 @@ const data = {
       ],
     },
     {
-        title: "ESLs",
-        url: "#",
-        icon: RectangleHorizontal,
-        items: [
-          {
-            title: "Add ESL",
-            url: "#",
-          },
-          {
-            title: "All ESLs",
-            url: "#",
-          },
-          {
-            title: "Access Points",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "Layouts",
-        url: "#",
-        icon: PanelsTopLeft,
-        items: [
-          {
-            title: "New Layout",
-            url: "#",
-          },
-          {
-            title: "All Layouts",
-            url: "#",
-          },
-          {
-            title: "Trash",
-            url: "#",
-          },
-        ],
-      },
-      {
-        title: "Users",
-        url: "#",
-        icon: Users,
-        items: [
-          {
-            title: "Add User",
-            url: "#",
-          },
-          {
-            title: "All Users",
-            url: "#",
-          },
-        ],
-      },
+      title: "ESLs",
+      url: "#",
+      icon: RectangleHorizontal,
+      items: [
+        {
+          title: "Add ESL",
+          url: "#",
+        },
+        {
+          title: "All ESLs",
+          url: "#",
+        },
+        {
+          title: "Access Points",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Layouts",
+      url: "#",
+      icon: PanelsTopLeft,
+      items: [
+        {
+          title: "New Layout",
+          url: "#",
+        },
+        {
+          title: "All Layouts",
+          url: "#",
+        },
+        {
+          title: "Trash",
+          url: "#",
+        },
+      ],
+    },
+    {
+      title: "Users",
+      url: "#",
+      icon: Users,
+      items: [
+        {
+          title: "Add User",
+          url: "#",
+        },
+        {
+          title: "All Users",
+          url: "#",
+        },
+      ],
+    },
   ],
   navSecondary: [
     {
@@ -167,7 +177,7 @@ const data = {
       icon: Send,
     },
   ],
-}
+};
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
@@ -193,8 +203,7 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
-      <SidebarFooter>
-      </SidebarFooter>
+      <SidebarFooter></SidebarFooter>
     </Sidebar>
-  )
+  );
 }
