@@ -10,9 +10,9 @@ export default function TestSearch() {
   return (
     <div className="p-6">
       <SearchBar
-        placeholder="Search Branch"
+        placeholder="Search Branches"
         onSearch={handleSearch}
-        columns={["Columns", "Column1", "Column2", "Column3", "Column4"]}
+        columns={["Name", "Location", "Columns"]}
       />
     </div>
   );
