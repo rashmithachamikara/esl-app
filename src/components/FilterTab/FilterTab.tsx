@@ -16,7 +16,7 @@ interface SelectProps {
   onChange?: (value: string) => void; // Callback when selection changes
 }
 
-export function CustomSelect({
+export function FilterTab({
   label,
   items,
   placeholder = "Select an option",

@@ -2,7 +2,7 @@
 
 import AddButton from "@/components/AddButton/AddButton";
 import DesignCard from "@/components/design-card";
-import { CustomSelect } from "@/components/FilterTab/FilterTab";
+import { FilterTab } from "@/components/FilterTab/FilterTab";
 
 export default function Page() {
   return (
@@ -16,7 +16,7 @@ export default function Page() {
       >
         <AddButton label="New Design" onClick={() => {}} />
 
-        <CustomSelect
+        <FilterTab
           label="Size"
           items={[
             { value: "all", name: "All" },

@@ -1,7 +1,7 @@
 "use client";
 
 import DesignCard from "@/components/design-card";
-import { CustomSelect } from "@/components/FilterTab/FilterTab";
+import { FilterTab } from "@/components/FilterTab/FilterTab";
 import AddButton from "@/components/AddButton/AddButton";
 
 export default function Page() {
@@ -20,7 +20,7 @@ export default function Page() {
       >
         <AddButton label="Add Layout" onClick={handleAddClick} />
 
-        <CustomSelect
+        <FilterTab
           label="Branch"
           items={[
             { value: "all", name: "All" },
