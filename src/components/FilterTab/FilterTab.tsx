@@ -1,61 +1,42 @@
-"use client";
+import * as React from "react";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
-import { useState } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { ChevronDownIcon } from "lucide-react";
-
-interface FilterTabProps {
-  placeholder?: string;
-  filters?: string[];
+interface SelectProps {
+  label: string; // The label for the group
+  items: { value: string; name: string }[]; // List of items
+  placeholder?: string; // Optional placeholder
+  onChange?: (value: string) => void; // Callback when selection changes
 }
 
-export default function FilterTab({
-  placeholder = "Filter",
-  filters = ["All"],
-}: FilterTabProps) {
-  const [selectedFilter, setSelectedFilter] = useState(filters[0]);
-
+export function CustomSelect({
+  label,
+  items,
+  placeholder = "Select an option",
+  onChange,
+}: SelectProps) {
   return (
-    <div className="flex flex-col space-y-2">
-      <label className="text-gray-700 font-inter font-normal text-sm leading-6">
-        {placeholder}
-      </label>
-
-      {/* Dropdown Menu */}
-      <Menu as="div" className="relative w-[551px]">
-        <Menu.Button className="w-full flex justify-between items-center border border-gray-300 rounded-md px-4 py-2 bg-white text-gray-700 text-sm leading-6">
-          {selectedFilter}
-          <ChevronDownIcon className="w-4 h-4" />
-        </Menu.Button>
-
-        <Transition
-          enter="transition ease-out duration-100"
-          enterFrom="transform opacity-0 scale-95"
-          enterTo="transform opacity-100 scale-100"
-          leave="transition ease-in duration-75"
-          leaveFrom="transform opacity-100 scale-100"
-          leaveTo="transform opacity-0 scale-95"
-        >
-          <Menu.Items className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg">
-            {filters.map((filter, index) => (
-              <Menu.Item key={index} as="div" className="w-full">
-                {({ active }) => (
-                  <button
-                    onClick={() => setSelectedFilter(filter)}
-                    className={`w-full px-4 py-2 text-left text-sm leading-6 ${
-                      active ? "bg-gray-100" : "bg-white"
-                    } ${index === 0 ? "rounded-t-md" : ""} ${
-                      index === filters.length - 1 ? "rounded-b-md" : ""
-                    }`}
-                  >
-                    {filter}
-                  </button>
-                )}
-              </Menu.Item>
-            ))}
-          </Menu.Items>
-        </Transition>
-      </Menu>
-    </div>
+    <Select onValueChange={onChange}>
+      <SelectTrigger className="w-[180px]">
+        <SelectValue placeholder={placeholder} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectLabel>{label}</SelectLabel>
+          {items.map((item) => (
+            <SelectItem key={item.value} value={item.value}>
+              {item.name}
+            </SelectItem>
+          ))}
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 }
