@@ -33,9 +33,7 @@ export function Modal({
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>
-            <h4>{dialogTitle}</h4> {/* Add h4 tag to dialog title */}
-          </DialogTitle>
+          <DialogTitle>{dialogTitle}</DialogTitle>
           <DialogDescription>{dialogDescription}</DialogDescription>
         </DialogHeader>
         {children} {/* Render children */}
@@ -45,7 +43,11 @@ export function Modal({
               Close
             </Button>
           </DialogClose>
-          <Button type="button" onClick={onSave} style={{ backgroundColor: "#D93639" }}>
+          <Button
+            type="button"
+            onClick={onSave}
+            style={{ backgroundColor: "#D93639" }}
+          >
             Save changes
           </Button>
         </DialogFooter>

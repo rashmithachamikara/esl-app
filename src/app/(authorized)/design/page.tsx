@@ -2,7 +2,7 @@
 
 import AddButton from "@/components/AddButton/AddButton";
 import DesignCard from "@/components/design-card";
-import FilterTab from "@/components/FilterTab/FilterTab";
+import { FilterTab } from "@/components/FilterTab/FilterTab";
 
 export default function Page() {
   return (
@@ -15,9 +15,17 @@ export default function Page() {
         className="flex flex-row-reverse gap-4 justify-between items-end mt-6"
       >
         <AddButton label="New Design" onClick={() => {}} />
+
         <FilterTab
-          placeholder="Size"
-          filters={["All", "240x320", "340x460", "580x640"]}
+          label="Size"
+          items={[
+            { value: "all", name: "All" },
+            { value: "240x320", name: "240x320" },
+            { value: "340x460", name: "340x460" },
+            { value: "580x640", name: "580x640" },
+          ]}
+          placeholder="Select a size"
+          onChange={(value) => console.log("Selected:", value)}
         />
       </div>
       <div className="grid grid-cols-1 gap-y-5 gap-x-16 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-2 text-sm">
