@@ -3,7 +3,7 @@
 import { TrendingUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
-//import "./line_chart.css";
+import "./line_chart.css";
 import {
   Card,
   CardContent,
