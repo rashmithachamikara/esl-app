@@ -36,7 +36,7 @@ export default function FilterTab({
           leaveFrom="transform opacity-100 scale-100"
           leaveTo="transform opacity-0 scale-95"
         >
-          <Menu.Items className="absolute mt-2 w-full bg-white border border-gray-300 rounded-md shadow-lg">
+          <Menu.Items className="absolute mt-1 w-full bg-white border border-gray-300 rounded-md shadow-lg">
             {filters.map((filter, index) => (
               <Menu.Item key={index} as="div" className="w-full">
                 {({ active }) => (

@@ -60,7 +60,7 @@ export default function SearchBar({
             </svg>
           </button>
         </DropdownMenuTrigger>
-        <DropdownMenuContent className="border border-gray-300 rounded-lg shadow-md bg-white w-[119px]">
+        <DropdownMenuContent className="border mt-1 border-gray-300 rounded-lg shadow-md bg-white w-[119px]">
           {columns.length > 0 ? (
             columns.map((col) => (
               <DropdownMenuItem
