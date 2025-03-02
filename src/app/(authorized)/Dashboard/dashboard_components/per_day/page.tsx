@@ -42,15 +42,15 @@ const chartConfig = {
 
 export default function Component() {
   return (
-    <Card>
+    <Card className="flex flex-col h-full">
       <CardHeader className="centered-header">
         <CardTitle>ESL Flashes Per Day</CardTitle>
         <CardDescription>ESLs got updated 350 times today</CardDescription>
         <div className="text-5xl font-bold">350</div>
         <div className="text-sm font-medium text-gray-500">FLASHES/DAY</div>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="flex-grow h-full">
+        <ChartContainer config={chartConfig} className="w-full h-full">
           <BarChart accessibilityLayer data={chartData}>
             <ChartTooltip
               cursor={false}

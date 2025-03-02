@@ -36,14 +36,14 @@ const chartConfig = {
 
 export default function Component() {
   return (
-    <Card>
+    <Card className="flex flex-col h-full">
       <CardHeader>
         <CardTitle>ESL Flashes by Branch</CardTitle>
         <CardDescription>Showing ESL Flashes of Branches</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
+      <CardContent className="flex-grow h-full">
+        <ChartContainer config={chartConfig} className="w-full h-full">
+          <BarChart data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="branch"
