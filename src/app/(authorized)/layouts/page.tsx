@@ -19,9 +19,12 @@ export default function Page() {
         className="flex flex-row-reverse gap-4 justify-between items-end mt-6"
       >
         <AddButton label="Add Layout" onClick={handleAddClick} />
-        <FilterTab />
+        <FilterTab
+          placeholder="Branch"
+          filters={["All", "SL", "Australia", "NewYork"]}
+        />
       </div>
-      <div className="grid grid-cols-1 gap-y-5 gap-x-16 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-5 text-sm">
+      <div className="grid grid-cols-1 gap-y-5 gap-x-16 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 mt-2 text-sm">
         {" "}
         {/* Adjust gap to 64px */}
         <DesignCard title="Floor 1" imageUrl="/image-library/Picture1.png" />
