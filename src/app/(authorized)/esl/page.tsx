@@ -25,7 +25,13 @@ export default function EslPage() {
           className="mt-4 items-end"
         />
       </div>
-      <SearchBar placeholder="Search ESL" onSearch={handleSearch} />
+      <div className="z-50">
+        <SearchBar
+          placeholder="Search ESLs"
+          onSearch={handleSearch}
+          columns={["Serial", "Mac", "Branch", "AP"]}
+        />
+      </div>
       <DataTable<Device> columns={deviceColumns} data={devices} />
     </>
   );
