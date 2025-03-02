@@ -14,11 +14,13 @@ import DeleteButton from "@/components/DeleteButton/DeleteButton";
 export default function DesignCard({
   title,
   imageUrl,
-  description, // New optional prop
+  description,
+  specs,
 }: {
   title: string;
   imageUrl: string;
-  description?: string; // Optional text
+  description?: string;
+  specs?: string;
 }) {
   return (
     <Card className="h-65">
@@ -36,10 +38,11 @@ export default function DesignCard({
             height={300}
           />
         </div>
-        {/* Conditionally render the description */}
+        {/* Conditionally render the texts with proper styling */}
         {description && (
-          <p className="text-xs text-gray-600 mt-2">{description}</p>
+          <p className="text-sm text-gray-700 mt-2">{description}</p>
         )}
+        {specs && <p className="text-[10px] text-gray-500">{specs}</p>}
       </CardContent>
       <CardFooter className="flex flex-col xl:flex-row justify-between mt-0 mb-0 space-y-2 xl:space-y-0 xl:space-x-2">
         <EditButton onClick={() => {}} />
