@@ -20,9 +20,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { ChartConfig, ChartContainer } from "@/components/ui/chart";
-const chartData = [
-  { browser: "safari", metric: 200, fill: "var(--color-safari)" },
-];
+const chartData = [{ browser: "safari", metric: 200, fill: "#D93639" }];
 
 const chartConfig = {
   metric: {
@@ -30,7 +28,7 @@ const chartConfig = {
   },
   safari: {
     label: "Safari",
-    color: "hsl(var(--chart-2))",
+    color: "#D93639",
   },
 } satisfies ChartConfig;
 

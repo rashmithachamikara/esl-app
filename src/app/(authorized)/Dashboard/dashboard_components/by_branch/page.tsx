@@ -30,20 +30,20 @@ const chartData = [
 const chartConfig = {
   esl: {
     label: "esl",
-    color: "hsl(var(--chart-1))",
+    color: "#0D9488",
   },
 } satisfies ChartConfig;
 
 export default function Component() {
   return (
-    <Card>
+    <Card className="flex flex-col h-full">
       <CardHeader>
         <CardTitle>ESL Flashes by Branch</CardTitle>
         <CardDescription>Showing ESL Flashes of Branches</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
-          <BarChart accessibilityLayer data={chartData}>
+      <CardContent className="flex-grow h-full">
+        <ChartContainer config={chartConfig} className="w-full h-full">
+          <BarChart data={chartData}>
             <CartesianGrid vertical={false} />
             <XAxis
               dataKey="branch"
@@ -56,7 +56,7 @@ export default function Component() {
               cursor={false}
               content={<ChartTooltipContent hideLabel />}
             />
-            <Bar dataKey="esl" fill="var(--color-esl)" radius={8}>
+            <Bar dataKey="esl" fill="#0D9488" radius={8}>
               <LabelList
                 position="top"
                 offset={12}

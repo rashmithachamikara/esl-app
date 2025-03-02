@@ -30,19 +30,19 @@ const chartData = [
 const chartConfig = {
   flashes: {
     label: "Flashes",
-    color: "hsl(var(--chart-1))",
+    color: "#D93639",
   },
 } satisfies ChartConfig;
 
 export default function Component() {
   return (
-    <Card>
+    <Card className="flex flex-col h-full">
       <CardHeader>
         <CardTitle>ESL Flashes</CardTitle>
         <CardDescription>January - June 2024</CardDescription>
       </CardHeader>
-      <CardContent>
-        <ChartContainer config={chartConfig}>
+      <CardContent className="flex-grow h-full">
+        <ChartContainer config={chartConfig} className="w-full h-full">
           <LineChart
             accessibilityLayer
             data={chartData}
@@ -66,10 +66,10 @@ export default function Component() {
             <Line
               dataKey="flashes"
               type="natural"
-              stroke="var(--color-flashes)"
+              stroke="#D93639"
               strokeWidth={2}
               dot={{
-                fill: "var(--color-flashes)",
+                fill: "#D93639",
               }}
               activeDot={{
                 r: 6,
