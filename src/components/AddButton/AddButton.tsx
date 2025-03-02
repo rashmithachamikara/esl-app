@@ -4,8 +4,9 @@ import React from "react";
 
 interface AddButtonProps {
   label: string;
-  onClick: () => void;
-  className?: string; // Optional className for additional styling
+  href?: string;
+  onClick?: () => void;
+  className?: string;
 }
 
 export default function AddButton({
