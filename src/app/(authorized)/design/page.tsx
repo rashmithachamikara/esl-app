@@ -30,22 +30,32 @@ export default function Page() {
         <DesignCard
           title="Design-002"
           imageUrl="/image-library/design_label.png"
+          description="Generic design used for everyday purposes"
+          specs="4.2” (400×300, Black White Red Yellow, 0°)"
         />
         <DesignCard
           title="Design-003"
           imageUrl="/image-library/design_label.png"
+          description="Generic design used for everyday purposes"
+          specs="4.2” (400×300, Black White Red Yellow, 0°)"
         />
         <DesignCard
           title="Design-004"
           imageUrl="/image-library/design_label.png"
+          description="Generic design used for everyday purposes"
+          specs="4.2” (400×300, Black White Red Yellow, 0°)"
         />
         <DesignCard
           title="Promotion-001"
           imageUrl="/image-library/design_label.png"
+          description="Generic design used for everyday purposes"
+          specs="4.2” (400×300, Black White Red Yellow, 0°)"
         />
         <DesignCard
           title="Season-001"
           imageUrl="/image-library/design_label.png"
+          description="Generic design used for everyday purposes"
+          specs="4.2” (400×300, Black White Red Yellow, 0°)"
         />
       </div>
     </>
