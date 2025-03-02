@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Modal } from "@/components/Modal/Modal";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -23,21 +25,21 @@ export default function Page() {
       >
         <div className="grid gap-4 py-4">
           <div className="grid grid-cols-4 items-center gap-4">
-            <label htmlFor="name" className="text-right">
+            <Label htmlFor="name" className="text-right">
               Name
-            </label>
-            <input
-              id="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              className="col-span-3 border border-gray-300 rounded-md p-2" // Add box styling
+            </Label>
+            <Input 
+              id="name" 
+              value={name} 
+              onChange={(e) => setName(e.target.value)} 
+              className="col-span-3 border border-gray-300 rounded-md p-2"
             />
           </div>
           <div className="grid grid-cols-4 items-center gap-4">
-            <label htmlFor="username" className="text-right">
+            <Label htmlFor="username" className="text-right">
               Username
-            </label>
-            <input
+            </Label>
+            <Input
               id="username"
               value={username}
               onChange={(e) => setUsername(e.target.value)}
