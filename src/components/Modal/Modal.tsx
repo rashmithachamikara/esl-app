@@ -10,7 +10,7 @@ import {
   DialogClose,
 } from "@/components/ui/dialog";
 import React from "react";
-
+import "@/css/typography.css";
 interface ModalProps {
   buttonLabel: string;
   dialogTitle: string;
@@ -33,7 +33,9 @@ export function Modal({
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
-          <DialogTitle>{dialogTitle}</DialogTitle>
+          <DialogTitle>
+            <h4>{dialogTitle}</h4> {/* Add h4 tag to dialog title */}
+          </DialogTitle>
           <DialogDescription>{dialogDescription}</DialogDescription>
         </DialogHeader>
         {children} {/* Render children */}
