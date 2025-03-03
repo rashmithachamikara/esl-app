@@ -11,6 +11,8 @@ import {
 } from "@/components/ui/dialog";
 import React from "react";
 import "@/css/typography.css";
+import AddButton from "@/components/AddButton/AddButton";
+
 interface ModalProps {
   buttonLabel: string;
   dialogTitle: string;
@@ -29,7 +31,7 @@ export function Modal({
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">{buttonLabel}</Button>
+        <AddButton label={buttonLabel} onClick={() => {}} />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
