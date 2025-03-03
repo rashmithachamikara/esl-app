@@ -1,12 +1,19 @@
 "use client";
 
+import { useState } from "react";
 import DesignCard from "@/components/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
 import AddButton from "@/components/AddButton/AddButton";
+import { Modal } from "@/components/Modal/Modal";
 
 export default function Page() {
-  const handleAddClick = () => {
-    console.log("Add button clicked");
+  const [name, setName] = useState("");
+  const [username, setUsername] = useState("");
+  const [branch, setBranch] = useState("");
+
+  const handleSave = () => {
+    console.log("Save changes clicked");
+    // Add your save logic here
   };
 
   return (
@@ -18,7 +25,45 @@ export default function Page() {
         style={{ display: "flex" }}
         className="flex flex-row-reverse gap-4 justify-between items-end mt-6"
       >
-        <AddButton label="Add Layout" onClick={handleAddClick} />
+        <Modal
+          buttonLabel="Add Layout"
+          dialogTitle="Add Layout"
+          dialogDescription="Fill in the details for the new layout."
+          onSave={handleSave}
+        >
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-4 items-center gap-4">
+              <label htmlFor="name" className="text-right">
+                Name
+              </label>
+              <input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Name"
+                className="col-span-3 border border-gray-300 rounded-md p-2" // Add box styling
+              />
+            </div>
+            <div className="grid grid-cols-4 items-center gap-4">
+              <label htmlFor="branch" className="text-right">
+                Branch
+              </label>
+              <select
+                id="branch"
+                value={branch}
+                onChange={(e) => setBranch(e.target.value)}
+                className="col-span-3 border border-gray-300 rounded-md p-2" // Add box styling
+              >
+                <option value="" disabled>
+                  Select a Branch
+                </option>
+                <option value="sl">SL</option>
+                <option value="australia">Australia</option>
+                <option value="america">America</option>
+              </select>
+            </div>
+          </div>
+        </Modal>
 
         <FilterTab
           label="Branch"
