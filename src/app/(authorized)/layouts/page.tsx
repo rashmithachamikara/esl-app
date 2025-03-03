@@ -1,6 +1,6 @@
 "use client";
 
-import DesignCard from "@/components/design-card";
+import DesignCard from "@/components/Cards/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
 import AddButton from "@/components/AddButton/AddButton";
 
