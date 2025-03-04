@@ -19,6 +19,7 @@ interface ModalProps {
   dialogDescription: string;
   onSave: () => void;
   children: React.ReactNode; // Accept children
+  saveButtonLabel: string; // Add saveButtonLabel prop
 }
 
 export function Modal({
@@ -27,6 +28,7 @@ export function Modal({
   dialogDescription,
   onSave,
   children,
+  saveButtonLabel, // Destructure saveButtonLabel
 }: ModalProps) {
   return (
     <Dialog>
@@ -50,7 +52,7 @@ export function Modal({
             onClick={onSave}
             style={{ backgroundColor: "#D93639" }}
           >
-            Save changes
+            {saveButtonLabel} {/* Use saveButtonLabel prop */}
           </Button>
         </DialogFooter>
       </DialogContent>

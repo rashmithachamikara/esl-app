@@ -27,32 +27,33 @@ export default function Page() {
       >
         <Modal
           buttonLabel="Add Layout"
-          dialogTitle="Add Layout"
+          dialogTitle="New Layout"
           dialogDescription="Fill in the details for the new layout."
           onSave={handleSave}
+          saveButtonLabel="Add Layout"
         >
           <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <label htmlFor="name" className="text-right">
-                Name
+            <div className="grid grid-cols-1 gap-1">
+              <label htmlFor="name" className="text-left">
+                Layout Name
               </label>
               <input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 placeholder="Name"
-                className="col-span-3 border border-gray-300 rounded-md p-2" // Add box styling
+                className="border border-gray-300 rounded-md p-2" // Add box styling
               />
             </div>
-            <div className="grid grid-cols-4 items-center gap-4">
-              <label htmlFor="branch" className="text-right">
+            <div className="grid grid-cols-1 gap-1">
+              <label htmlFor="branch" className="text-left">
                 Branch
               </label>
               <select
                 id="branch"
                 value={branch}
                 onChange={(e) => setBranch(e.target.value)}
-                className="col-span-3 border border-gray-300 rounded-md p-2" // Add box styling
+                className="border border-gray-300 rounded-md p-2" // Add box styling
               >
                 <option value="" disabled>
                   Select a Branch
