@@ -58,7 +58,10 @@ export default function Page() {
                 Branch
               </Label>
               <Select>
-                <SelectTrigger className="border border-gray-300 rounded-md p-2">
+                <SelectTrigger
+                  id="branch"
+                  className="border border-gray-300 rounded-md p-2"
+                >
                   <SelectValue placeholder="Select a Branch" />
                 </SelectTrigger>
                 <SelectContent>
