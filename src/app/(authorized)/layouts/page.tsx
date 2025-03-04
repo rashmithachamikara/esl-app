@@ -5,6 +5,17 @@ import DesignCard from "@/components/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
 import AddButton from "@/components/AddButton/AddButton";
 import { Modal } from "@/components/Modal/Modal";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -33,11 +44,11 @@ export default function Page() {
           saveButtonLabel="Add Layout"
         >
           <div className="grid gap-4 py-4">
-            <div className="grid grid-cols-1 gap-1">
-              <label htmlFor="name" className="text-left">
+            <div className="grid grid-cols-1 gap-2">
+              <Label htmlFor="name" className="text-left">
                 Layout Name
-              </label>
-              <input
+              </Label>
+              <Input
                 id="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
@@ -45,23 +56,23 @@ export default function Page() {
                 className="border border-gray-300 rounded-md p-2" // Add box styling
               />
             </div>
-            <div className="grid grid-cols-1 gap-1">
-              <label htmlFor="branch" className="text-left">
+            <div className="grid grid-cols-1 gap-2">
+              <Label htmlFor="branch" className="text-left">
                 Branch
-              </label>
-              <select
-                id="branch"
-                value={branch}
-                onChange={(e) => setBranch(e.target.value)}
-                className="border border-gray-300 rounded-md p-2" // Add box styling
-              >
-                <option value="" disabled>
-                  Select a Branch
-                </option>
-                <option value="sl">SL</option>
-                <option value="australia">Australia</option>
-                <option value="america">America</option>
-              </select>
+              </Label>
+              <Select>
+                <SelectTrigger className= "border border-gray-300 rounded-md p-2">
+                  <SelectValue placeholder="Select a Branch" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Fruits</SelectLabel>
+                    <SelectItem value="apple">Sri Lanka</SelectItem>
+                    <SelectItem value="banana">Australia</SelectItem>
+                    <SelectItem value="blueberry">America</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
             </div>
           </div>
         </Modal>
