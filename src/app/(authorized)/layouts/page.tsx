@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import DesignCard from "@/components/design-card";
+import DesignCard from "@/components/Cards/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
 import { Modal } from "@/components/Modal/Modal";
 import { Label } from "@/components/ui/label";

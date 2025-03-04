@@ -1,7 +1,7 @@
 "use client";
 
 import AddButton from "@/components/AddButton/AddButton";
-import DesignCard from "@/components/design-card";
+import DesignCard from "@/components/Cards/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
 
 export default function Page() {

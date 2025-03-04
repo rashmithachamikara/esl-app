@@ -24,8 +24,8 @@ import {
   ChevronDown,
 } from "lucide-react";
 
-import { NavMain } from "@/components/nav-main";
-import { NavSecondary } from "@/components/nav-secondary";
+import { NavMain } from "@/components/SideBar/nav-main";
+import { NavSecondary } from "@/components/SideBar/nav-secondary";
 import {
   Sidebar,
   SidebarContent,
