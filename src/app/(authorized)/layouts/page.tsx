@@ -3,7 +3,6 @@
 import { useState } from "react";
 import DesignCard from "@/components/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
-import AddButton from "@/components/AddButton/AddButton";
 import { Modal } from "@/components/Modal/Modal";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
@@ -15,12 +14,10 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "@/components/ui/select"
+} from "@/components/ui/select";
 
 export default function Page() {
   const [name, setName] = useState("");
-  const [username, setUsername] = useState("");
-  const [branch, setBranch] = useState("");
 
   const handleSave = () => {
     console.log("Save changes clicked");
@@ -61,7 +58,7 @@ export default function Page() {
                 Branch
               </Label>
               <Select>
-                <SelectTrigger className= "border border-gray-300 rounded-md p-2">
+                <SelectTrigger className="border border-gray-300 rounded-md p-2">
                   <SelectValue placeholder="Select a Branch" />
                 </SelectTrigger>
                 <SelectContent>
