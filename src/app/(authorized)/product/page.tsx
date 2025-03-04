@@ -16,7 +16,7 @@ export default function ProductPage() {
   };
 
   return (
-    <>
+    <> 
       <h1>Products</h1>
       <div className="flex flex-row-reverse">
         <AddButton
@@ -33,6 +33,6 @@ export default function ProductPage() {
         />
       </div>
        <DataTable<Product> columns={productColumns} data={products} />
-    </>
+      </>
   );
 }
