@@ -1,12 +1,27 @@
 "use client";
 
+import { useState } from "react";
 import DesignCard from "@/components/design-card";
 import { FilterTab } from "@/components/FilterTab/FilterTab";
-import AddButton from "@/components/AddButton/AddButton";
+import { Modal } from "@/components/Modal/Modal";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function Page() {
-  const handleAddClick = () => {
-    console.log("Add button clicked");
+  const [name, setName] = useState("");
+
+  const handleSave = () => {
+    console.log("Save changes clicked");
+    // Add your save logic here
   };
 
   return (
@@ -18,7 +33,49 @@ export default function Page() {
         style={{ display: "flex" }}
         className="flex flex-row-reverse gap-4 justify-between items-end mt-6"
       >
-        <AddButton label="Add Layout" onClick={handleAddClick} />
+        <Modal
+          buttonLabel="Add Layout"
+          dialogTitle="New Layout"
+          dialogDescription="Fill in the details for the new layout."
+          onSave={handleSave}
+          saveButtonLabel="Add Layout"
+        >
+          <div className="grid gap-4 py-4">
+            <div className="grid grid-cols-1 gap-2">
+              <Label htmlFor="name" className="text-left">
+                Layout Name
+              </Label>
+              <Input
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                placeholder="Name"
+                className="border border-gray-300 rounded-md p-2" // Add box styling
+              />
+            </div>
+            <div className="grid grid-cols-1 gap-2">
+              <Label htmlFor="branch" className="text-left">
+                Branch
+              </Label>
+              <Select>
+                <SelectTrigger
+                  id="branch"
+                  className="border border-gray-300 rounded-md p-2"
+                >
+                  <SelectValue placeholder="Select a Branch" />
+                </SelectTrigger>
+                <SelectContent>
+                  <SelectGroup>
+                    <SelectLabel>Fruits</SelectLabel>
+                    <SelectItem value="apple">Sri Lanka</SelectItem>
+                    <SelectItem value="banana">Australia</SelectItem>
+                    <SelectItem value="blueberry">America</SelectItem>
+                  </SelectGroup>
+                </SelectContent>
+              </Select>
+            </div>
+          </div>
+        </Modal>
 
         <FilterTab
           label="Branch"

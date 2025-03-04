@@ -11,12 +11,15 @@ import {
 } from "@/components/ui/dialog";
 import React from "react";
 import "@/css/typography.css";
+import AddButton from "@/components/AddButton/AddButton";
+
 interface ModalProps {
   buttonLabel: string;
   dialogTitle: string;
   dialogDescription: string;
   onSave: () => void;
   children: React.ReactNode; // Accept children
+  saveButtonLabel: string; // Add saveButtonLabel prop
 }
 
 export function Modal({
@@ -25,11 +28,12 @@ export function Modal({
   dialogDescription,
   onSave,
   children,
+  saveButtonLabel, // Destructure saveButtonLabel
 }: ModalProps) {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">{buttonLabel}</Button>
+        <AddButton label={buttonLabel} onClick={() => {}} />
       </DialogTrigger>
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
@@ -48,7 +52,7 @@ export function Modal({
             onClick={onSave}
             style={{ backgroundColor: "#D93639" }}
           >
-            Save changes
+            {saveButtonLabel} {/* Use saveButtonLabel prop */}
           </Button>
         </DialogFooter>
       </DialogContent>
