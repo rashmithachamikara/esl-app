@@ -36,7 +36,7 @@ interface DataTableProps<T> {
 }
 
 //Pass column layout as a prop. Pass data as a prop.
-export function DataTable<T>({ columns, data }: DataTableProps<T>) {
+export function DataTable<T>({ columns, data}: DataTableProps<T>) {
   const [columnVisibility, setColumnVisibility] =
     React.useState<VisibilityState>({});
   const [globalFilter, setGlobalFilter] = React.useState("");
@@ -61,6 +61,7 @@ export function DataTable<T>({ columns, data }: DataTableProps<T>) {
   return (
     <div className="w-full p-4 border rounded-lg">
       {/* Table Tools */}
+
       <div className="flex items-center gap-2 mb-4">
         {/* Search Box */}
         <Input
