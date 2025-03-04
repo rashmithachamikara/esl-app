@@ -13,13 +13,12 @@ import { MoreVertical } from "lucide-react";
 export interface Product {
   name: string;
   category: string;
-  price: string|number;
+  price: string | number;
   description: string;
 }
 
 // Table columns definition
 export const productColumns: ColumnDef<Product>[] = [
- 
   {
     accessorKey: "name",
     header: "Product Name",
@@ -42,7 +41,7 @@ export const productColumns: ColumnDef<Product>[] = [
     header: "",
     enableHiding: false,
     cell: ({ row }) => {
-      const branch = row.original;
+      const product = row.original;
       return (
         <DropdownMenu>
           <DropdownMenuTrigger asChild>
@@ -51,14 +50,10 @@ export const productColumns: ColumnDef<Product>[] = [
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end">
-            <DropdownMenuItem
-              onClick={() => alert(`Editing ${branch.branchName}`)}
-            >
+            <DropdownMenuItem onClick={() => alert(`Editing ${product.name}`)}>
               Edit
             </DropdownMenuItem>
-            <DropdownMenuItem
-              onClick={() => alert(`Deleting ${branch.branchName}`)}
-            >
+            <DropdownMenuItem onClick={() => alert(`Deleting ${product.name}`)}>
               Delete
             </DropdownMenuItem>
           </DropdownMenuContent>
@@ -67,5 +62,3 @@ export const productColumns: ColumnDef<Product>[] = [
     },
   },
 ];
-
- 
