@@ -10,6 +10,7 @@ import { Pencil, Trash2 } from "lucide-react";
 import Image from "next/image";
 import EditButton from "@/components/EditButton/EditButton";
 import DeleteButton from "@/components/DeleteButton/DeleteButton";
+import { ConfirmModal } from "@/components/Modal/ConfirmModal";
 
 export default function DesignCard({
   title,
@@ -22,6 +23,11 @@ export default function DesignCard({
   description?: string;
   specs?: string;
 }) {
+  const handleDelete = () => {
+    console.log("Delete confirmed");
+    // Add your delete logic here
+  };
+
   return (
     <Card className="h-65">
       <CardHeader className="mb-0 pb-1">
@@ -46,7 +52,13 @@ export default function DesignCard({
       </CardContent>
       <CardFooter className="flex flex-col xl:flex-row justify-between mt-0 mb-0 space-y-2 xl:space-y-0 xl:space-x-2">
         <EditButton onClick={() => {}} />
-        <DeleteButton onClick={() => {}} />
+        <ConfirmModal
+          buttonLabel="Delete"
+          dialogTitle="Confirm Delete"
+          dialogDescription="Are you sure you want to delete this item?"
+          onConfirm={handleDelete}
+        ><></>
+        </ConfirmModal>
       </CardFooter>
     </Card>
   );
