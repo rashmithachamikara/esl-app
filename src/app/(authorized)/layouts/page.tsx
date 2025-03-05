@@ -6,15 +6,7 @@ import { FilterTab } from "@/components/FilterTab/FilterTab";
 import { Modal } from "@/components/Modal/Modal";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectLabel,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+import { SelectProp } from "@/components/SelectProp/SelectProp";
 
 export default function Page() {
   const [name, setName] = useState("");
@@ -57,22 +49,16 @@ export default function Page() {
               <Label htmlFor="branch" className="text-left">
                 Branch
               </Label>
-              <Select>
-                <SelectTrigger
-                  id="branch"
-                  className="border border-gray-300 rounded-md p-2"
-                >
-                  <SelectValue placeholder="Select a Branch" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectGroup>
-                    <SelectLabel>Fruits</SelectLabel>
-                    <SelectItem value="apple">Sri Lanka</SelectItem>
-                    <SelectItem value="banana">Australia</SelectItem>
-                    <SelectItem value="blueberry">America</SelectItem>
-                  </SelectGroup>
-                </SelectContent>
-              </Select>
+              <SelectProp
+                label="Branch"
+                items={[
+                  { value: "Sri Lanka", name: "Sri Lanka" },
+                  { value: "Australia", name: "Australia" },
+                  { value: "America", name: "America" },
+                ]}
+                placeholder="Select a Branch"
+                onChange={(value) => console.log("Selected:", value)}
+              />
             </div>
           </div>
         </Modal>
