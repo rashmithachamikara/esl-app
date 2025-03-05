@@ -6,7 +6,7 @@ import { FilterTab } from "@/components/FilterTab/FilterTab";
 import { Modal } from "@/components/Modal/Modal";
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
-import { SelectProp } from "@/components/SelectProp/SelectProp";
+import { SelectProp } from "@/components/select/select";
 
 export default function Page() {
   const [name, setName] = useState("");
