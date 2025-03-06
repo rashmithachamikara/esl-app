@@ -47,7 +47,7 @@ export default function ProductPage() {
             dialogTitle="Add Product"
             dialogDescription="Fill this to add a new Product."
             onSave={handleSave}
-            saveButtonLabel="Add Product"
+           
           >
             <div className="grid gap-4 py-4">
               <div className="grid grid-cols-1 gap-2">
