@@ -40,13 +40,13 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "#",
+      url: "/Dashboard",
       icon: LayoutDashboard,
       isActive: true,
       items: [
         {
           title: "Summary",
-          url: "#",
+          url: "/Dashboard",
         },
         {
           title: "ESL",
@@ -75,7 +75,7 @@ const data = {
     },
     {
       title: "Designs",
-      url: "#",
+      url: "/design",
       icon: Brush,
       items: [
         {
@@ -84,7 +84,7 @@ const data = {
         },
         {
           title: "All Designs",
-          url: "#",
+          url: "design",
         },
         {
           title: "Trash",
@@ -103,7 +103,7 @@ const data = {
         },
         {
           title: "All Products",
-          url: "#",
+          url: "/product",
         },
         {
           title: "Categories",
@@ -122,7 +122,7 @@ const data = {
         },
         {
           title: "All ESLs",
-          url: "#",
+          url: "/esl",
         },
         {
           title: "Access Points",
@@ -141,7 +141,7 @@ const data = {
         },
         {
           title: "All Layouts",
-          url: "#",
+          url: "/layouts",
         },
         {
           title: "Trash",
