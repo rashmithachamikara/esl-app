@@ -40,13 +40,13 @@ const data = {
   navMain: [
     {
       title: "Dashboard",
-      url: "/Dashboard",
+      url: "/dashboard",
       icon: LayoutDashboard,
       isActive: true,
       items: [
         {
           title: "Summary",
-          url: "/Dashboard",
+          url: "/dashboard",
         },
         {
           title: "ESL",
