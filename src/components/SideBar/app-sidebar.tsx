@@ -6,6 +6,7 @@ import {
   Bot,
   Command,
   LifeBuoy,
+  LogOut,
   Map,
   PieChart,
   Send,
@@ -166,6 +167,12 @@ const data = {
     },
   ],
   navSecondary: [
+    {
+      title: "Logout",
+      url: "#",
+      icon: LogOut,
+      onclick: handleLogout,
+    },
     {
       title: "Support",
       url: "#",
