@@ -171,7 +171,6 @@ const data = {
       title: "Logout",
       url: "#",
       icon: LogOut,
-      onclick: handleLogout,
     },
     {
       title: "Support",
